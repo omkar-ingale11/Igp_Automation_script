@@ -6,24 +6,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="IGP.Sanity.UserJourneyWithExpressDelivery">
-        <methods>
-          <include name="userJourneyAndExpressDelivery"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- IGP.Sanity.UserJourneyWithExpressDelivery -->
       <class name="IGP.Sanity.internationalOrderFlow">
         <methods>
           <include name="internationalOrder"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- IGP.Sanity.internationalOrderFlow -->
-      <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="allDeliveryTypesSearchAndCheckoutLogin"/>
-        </methods>
-      </class> <!-- IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [IgpQuickSanity] -->

@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T12:31:19 IST" name="Default suite" finished-at="2025-07-02T12:32:45 IST" duration-ms="86196">
+  <suite started-at="2025-07-03T14:37:14 IST" name="Default suite" finished-at="2025-07-03T14:37:58 IST" duration-ms="43951">
     <groups>
     </groups>
-    <test started-at="2025-07-02T12:31:19 IST" name="Default test" finished-at="2025-07-02T12:32:45 IST" duration-ms="86196">
-      <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@194bcebf]" started-at="2025-07-02T12:31:19 IST" name="launchApplication" finished-at="2025-07-02T12:31:28 IST" duration-ms="8398" status="PASS">
+    <test started-at="2025-07-03T14:37:14 IST" name="Default test" finished-at="2025-07-03T14:37:58 IST" duration-ms="43951">
+      <class name="IGP.Sanity.internationalOrderFlow">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.internationalOrderFlow@194bcebf]" started-at="2025-07-03T14:37:14 IST" name="launchApplication" finished-at="2025-07-03T14:37:23 IST" duration-ms="9367" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="allDeliveryTypesSearchAndCheckoutLogin()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@194bcebf]" started-at="2025-07-02T12:31:28 IST" name="allDeliveryTypesSearchAndCheckoutLogin" finished-at="2025-07-02T12:32:45 IST" duration-ms="77741" status="PASS">
+        <test-method signature="internationalOrder()[pri:0, instance:IGP.Sanity.internationalOrderFlow@194bcebf]" started-at="2025-07-03T14:37:23 IST" name="internationalOrder" finished-at="2025-07-03T14:37:58 IST" duration-ms="34549" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- allDeliveryTypesSearchAndCheckoutLogin -->
-      </class> <!-- IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin -->
+        </test-method> <!-- internationalOrder -->
+      </class> <!-- IGP.Sanity.internationalOrderFlow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

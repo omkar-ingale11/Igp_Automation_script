@@ -18,7 +18,7 @@ public class PLPages extends IgpAbstractComponent{
     }
 	
 	
-	@FindBy (css ="img[title='Two Dozen Chocolate Roses Bouquet']")
+    @FindBy(xpath = "//div[@class='product-grid-item product-grid-item-revamp col s3'] [1]")
 	WebElement australiaProduct;
 	
 
