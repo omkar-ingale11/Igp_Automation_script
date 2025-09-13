@@ -31,7 +31,14 @@ public class SummaryPage extends IgpAbstractComponent{
 	@FindBy (xpath = "//div[@class='payment-button-container']")
 	WebElement proceedToPaymentCTA;
 	
+	@FindBy (css = "span[class='Paragraph-14-S--Regular']")
+	WebElement greetingMessage1;
 	
+	@FindBy (css = ".save-preview-button.Paragraph-12-XS--Semibold.caps")
+	WebElement saveAndPreviewCTA;
+	
+	@FindBy (css = ".greeting-card-preview-overlay-close")
+	WebElement greetingPopUpclose;
 	
 	
 	
@@ -57,5 +64,22 @@ public class SummaryPage extends IgpAbstractComponent{
 		proceedToPaymentCTA.click();
 	}
 	
+	public void addGreetingMessage()
+	{
+		greetingMessage1.click();
+	}
+	
+	
+	public void clickSaveAndPreviewCTA()
+	{
+		saveAndPreviewCTA.click();
+	}
+	
 
+	public void closeGreetingPopUp()
+	{
+		greetingPopUpclose.click();
+	}
+	
+	
 }

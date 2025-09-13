@@ -48,21 +48,27 @@ public class IgpAbstractComponent {
 	public void scrollingDown()
 	{
 	JavascriptExecutor js =  (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0,250)");
+	js.executeScript("window.scrollBy(0,300)");
 	}
 	
 	// scrolling Up
 	public void scrollingUp()
 	{
 	JavascriptExecutor js =  (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0,-300)");
+	js.executeScript("window.scrollBy(0,-150)");
 	}
 	
 	// explicitly wait for the element
 	public void waitElementForAppear(By findBy)
 	{
-		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(7));
+		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+	}
+	
+	public void waitElementToBeClickable (By findBy)
+	{
+		WebDriverWait wait = new WebDriverWait (driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 	}
 	
 	public void scrollingDownmore()
@@ -71,4 +77,9 @@ public class IgpAbstractComponent {
 	js.executeScript("window.scrollBy(0,800)");
 	}
 	
+	public void scrollingDownmorextra()
+	{
+	JavascriptExecutor js =  (JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,1000)");
+	}
 }

@@ -50,12 +50,12 @@ public class baseTest {
 	
         }
 		
-//		@AfterMethod (alwaysRun = true)
-//		public void closeBrowser() throws InterruptedException 
-//		{
-//			Thread.sleep(1500);
-//			//driver.close();
-//			driver.quit();
-//		}
+		@AfterMethod (alwaysRun = true)
+		public void closeBrowser() throws InterruptedException 
+		{
+			Thread.sleep(1500);
+			//driver.close();
+			driver.quit();
+		}
 		
 }						

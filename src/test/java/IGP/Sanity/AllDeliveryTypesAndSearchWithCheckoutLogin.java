@@ -1,15 +1,20 @@
 package IGP.Sanity;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import igpAbstractComponent.IgpAbstractComponent;
 import pageObject.DeliveryDetailsPage;
 import pageObject.MegaMenu;
+import pageObject.OrderDetailsPage;
 import pageObject.PDPPage;
 import pageObject.PLPages;
 import pageObject.PaymentPage;
@@ -27,10 +32,13 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 	{
 		IgpAbstractComponent ab = new IgpAbstractComponent(driver);
 		
+		// action class
+		Actions actions = new Actions(driver);
+		
 		// click on same day delivery tile
 		IGPHomePage.clickSameDayDelivery();
 		
-		ab.waitElementForAppear(By.xpath("//img[@title='Floral Delight Cake']"));
+	//	ab.waitElementForAppear(By.xpath("//img[@title='Floral Delight Cake']"));
 		
 		// same day delivery page object
 		SameDayDeliveryPage sameDay = new SameDayDeliveryPage (driver);
@@ -66,10 +74,44 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// open select time slot
 		pdp.selectTimeSlot();
 		
-		ab.scrollingDown();
+		Thread.sleep(1000);
+		
+	//	WebElement flv = driver.findElement(By.cssSelector("div[class='flavour-drop-down']"));
+		
+	//	actions.moveToElement(flv).perform();
 		
 		// select flavor
-		pdp.selectFlavor();
+		
+		ab.scrollingDown();
+		
+		Thread.sleep(1000);
+		
+	//	writing if else condition for selection of flavor
+		
+		List <WebElement> flavourSelect = driver.findElements(By.cssSelector("div[class='flavour-drop-down']"));
+		List <WebElement> flavourPreselected = driver.findElements(By.cssSelector("div[class='flavour-drop-down-container rebrand-attribute-dropdown flavour-selected flavour-preselected']"));
+		
+		if (flavourSelect.size() > 0 && flavourSelect.get(0).isDisplayed())
+		{
+			if (flavourPreselected.size() > 0 && flavourPreselected.get(0).isDisplayed())
+			{
+				System.out.println("Flavour is preselected");
+			}
+			
+			else
+			{
+				ab.waitElementToBeClickable(By.cssSelector("div[class='flavour-drop-down']"));
+				pdp.selectFlavor();
+			}
+			
+		}
+		
+		else
+		{
+			System.out.println("flavour selection DD is not present");
+		}
+		
+		
 		
 		// adding into cart
 		pdp.addToCart();
@@ -97,7 +139,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		ab.scrollingDownmore();
 		
-		pdp.selectTomorrowDate();
+		pdp.selectTodayDate();
 		
 		pdp.clickFixedTimeDelivery();
 		
@@ -158,12 +200,31 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// Summary page
 		SummaryPage summaryPage = new SummaryPage(driver);
 
-		Thread.sleep(1500);
+		Thread.sleep(2000);
+	
+		// adding greeting message
 		
-		ab.scrollingDownmore();
+		summaryPage.addGreetingMessage();
 		
-		//Thread.sleep(1500);
+		// Scrolling down towards coupon field with help of action class
+//		ab.scrollingDownmorextra();
+
+//		WebElement coupon = driver.findElement(By.cssSelector("div[class='select_feeBreakUp_cont select_impression_cont checkout_breakUp_cont ']"));
+//		actions.moveToElement(coupon).perform();
 		
+	//	ab.scrollingDownmorextra();
+		
+	//	ab.waitElementForAppear(By.cssSelector("span[class='coupon-form-focus Paragraph-12-XS--Semibold']"));
+		
+		
+//		WebElement couponField = driver.findElement(By.xpath("//span[@class='coupon-form-focus Paragraph-12-XS--Semibold']"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", couponField);
+//		couponField.click();
+//		
+//		ab.waitElementToBeClickable(By.xpath("//span[@class='coupon-form-focus Paragraph-12-XS--Semibold']"));
+//		
+//		Thread.sleep(1000);
+//		
 //		summaryPage.clickOnApplyCTA();
 //
 //		summaryPage.enterCouponName();
@@ -199,6 +260,12 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		// Track Order Details
 		successPage.clickTrackOrderCTA();
+		
+		// order details page - storing order id
+		
+		OrderDetailsPage orderDetails = new OrderDetailsPage (driver);
+		String orderId = orderDetails.getOrderId();
+		System.out.println("Order ID For All Delivery Types Order is " + orderId);
 
 		
     }

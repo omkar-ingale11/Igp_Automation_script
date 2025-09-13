@@ -1,11 +1,15 @@
 package IGP.Sanity;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import igpAbstractComponent.IgpAbstractComponent;
 import pageObject.DeliveryDetailsPage;
+import pageObject.OrderDetailsPage;
 import pageObject.PDPPage;
 import pageObject.PaymentPage;
 import pageObject.SameDayDeliveryPage;
@@ -39,7 +43,7 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 //		IGPHomePage.clickSameDayDelivery();
 		IGPHomePage.clickSameDayDelivery();
 		
-		ab.waitElementForAppear(By.xpath("//img[@title='Floral Delight Cake']"));
+		//ab.waitElementForAppear(By.xpath("//img[@title='Floral Delight Cake']"));
 		
 		SameDayDeliveryPage sameDay = new SameDayDeliveryPage (driver);
 		
@@ -59,8 +63,50 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 				
 		ab.scrollingDownmore();
 		
+		ab.scrollingDown();
+		
+		List<WebElement> expressDelivery = driver.findElements(By.xpath("//img[@alt='igp now']"));
+		if (expressDelivery.size() > 0 && expressDelivery.get(0).isDisplayed())
+		{	
+			System.out.println("Express delivery is avalibale");
+		}
+		else 
+		{
+			pdp.openTimeSlotsDD();
+			ab.scrollingDown();
+			Thread.sleep(1000);
+			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
+			pdp.selectTimeSlot();
+			Thread.sleep(1000);
+		//	ab.scrollingDown();
+			System.out.println("Express delivery is not available, Selecting Standard Delivery type");
+		}
+		
+		//ab.waitElementToBeClickable(By.cssSelector("div[class='flavour-drop-down']"));
 		// selecting flavor
-		pdp.selectFlavor();
+		List <WebElement> flavourSelect = driver.findElements(By.cssSelector("div[class='flavour-drop-down']"));
+		
+		List <WebElement> flavourPreselected = driver.findElements(By.cssSelector("div[class='flavour-drop-down-container rebrand-attribute-dropdown flavour-selected flavour-preselected']"));
+		
+		if (flavourSelect.size() > 0 && flavourSelect.get(0).isDisplayed())
+		{
+			if (flavourPreselected.size() > 0 && flavourPreselected.get(0).isDisplayed())
+			{
+				System.out.println("Flavour is preselected");
+			}
+			
+			else
+			{
+				ab.waitElementToBeClickable(By.cssSelector("div[class='flavour-drop-down']"));
+				pdp.selectFlavor();
+			}
+			
+		}
+		
+		else
+		{
+			System.out.println("flavour selection DD is not present");
+		}
 		
 		// adding into cart
 		pdp.addToCart();
@@ -93,6 +139,10 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 		
 		ab.waitElementForAppear(By.cssSelector("div[class='coupon-band success revamp-coupon-success']"));
 		
+		// adding greeting message
+		
+		summaryPage.addGreetingMessage();
+		
 		// click on proceed to payment
 		summaryPage.proceedToPaymentCTA();
 		
@@ -124,7 +174,12 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 		// click on Track order CTA 
 		successPage.clickTrackOrderCTA();
 		
+		// order details page - storing order id
 		
+		OrderDetailsPage orderDetails = new OrderDetailsPage (driver);
+		String orderId = orderDetails.getOrderId();
+		System.out.println("Order ID For Express Deliver Product is " + orderId);
+
 			
 		
 	}

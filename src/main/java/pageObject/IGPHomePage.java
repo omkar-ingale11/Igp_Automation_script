@@ -57,6 +57,7 @@ public class IGPHomePage extends IgpAbstractComponent {
 	public void visitIGP () 
 	{
 		driver.get("https://www.igp.com/");
+	//	driver.get("https://www.interflora.in/");
 	}
 	
 	// click on Profile

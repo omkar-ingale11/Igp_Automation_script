@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,6 +46,9 @@ public class PDPPage extends IgpAbstractComponent{
 	    
 	    @FindBy (css = "div[id = 'sel-Next_Day_Delivery']")
 		WebElement  internatinalNextDayDelivery;
+	    
+	    @FindBy (css = "div[id='sel-Standard_Delivery']")
+	    List<WebElement> internationalStdDelivery;
 	    
 	    // select tomorrow date
 	    @FindBy (xpath = "//button[@onclick='wholeselectdate(1,false)']")

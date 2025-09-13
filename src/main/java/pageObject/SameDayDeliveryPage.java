@@ -20,22 +20,39 @@ public class SameDayDeliveryPage extends IgpAbstractComponent {
 	}
     
     // cake product
-    @FindBy (xpath = "//img[@title='Floral Delight Cake']")
-    WebElement cakeProduct;
+    @FindBy (xpath = "//div[@class='product-grid-item product-grid-item-revamp col s3'] [1]")
+    WebElement sameDayFirstProduct;
 
     // flower product, 2nd product on PLP
     @FindBy(xpath = "//div[@class='product-grid-item product-grid-item-revamp col s3'] [1]")
     WebElement flowerProduct2ndPrdct;
     
-    //// flower product, 2nd product on PLP
+    // flower product, 2nd product on PLP
     @FindBy(xpath = "//div[@class='product-grid-item product-grid-item-revamp col s3'] [2]")
     WebElement ThirdPrdct;
+    
+    // Sort drop down
+    @FindBy (xpath = "//div[@class='c-dd sort-by pull-right w185 igp-revamp-sort ']")
+    WebElement sortFilterDD;
    
+    // low to high option selection
+    
+    @FindBy (xpath = "//li[@data-value='mrp_asc']")
+    WebElement lowToHigh;
+    
+    // low to high option selection
+    
+    @FindBy (xpath = "//li[@data-value='mrp_desc']")
+    WebElement highToLow;
+    
+    // latest first
+    @FindBy (xpath = "//li[@data-value='created_desc']")
+    WebElement latestFirst;
     
     // clicking on product
     public void clickOnProduct()
     {
-    	cakeProduct.click();
+    	sameDayFirstProduct.click();
     }
     
     // clicking on product
@@ -49,8 +66,24 @@ public class SameDayDeliveryPage extends IgpAbstractComponent {
     	ThirdPrdct.click();
     }
      
+    public void sortFilterDD()
+    {
+    	sortFilterDD.click();
+    }
     
+    public void lowToHigh()
+    {
+    	lowToHigh.click();
+    }
     
+    public void highToLow()
+    {
+    	highToLow.click();
+    }
     
+    public void latestFirst()
+    {
+    	latestFirst.click();
+    }
     
 }
