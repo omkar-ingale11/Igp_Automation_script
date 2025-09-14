@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [IgpQuickSanity]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="testComponent.Listeners"/>
+  </listeners>
+  <test thread-count="1" parallel="methods" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="IGP.Sanity.UserJourneyWithExpressDelivery">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="userJourneyAndExpressDelivery"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- IGP.Sanity.UserJourneyWithExpressDelivery -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [IgpQuickSanity] -->
