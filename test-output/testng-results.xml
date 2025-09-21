@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-12T11:42:09 IST" name="IgpQuickSanity" finished-at="2025-09-12T11:45:15 IST" duration-ms="186054">
+  <suite started-at="2025-09-21T18:20:45 IST" name="IgpQuickSanity" finished-at="2025-09-21T18:23:17 IST" duration-ms="151840">
     <groups>
     </groups>
-    <test started-at="2025-09-12T11:42:09 IST" name="Test" finished-at="2025-09-12T11:45:15 IST" duration-ms="186054">
+    <test started-at="2025-09-21T18:20:45 IST" name="Test" finished-at="2025-09-21T18:23:17 IST" duration-ms="151840">
       <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-12T11:43:13 IST" name="launchApplication" finished-at="2025-09-12T11:43:21 IST" duration-ms="8262" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-21T18:21:39 IST" name="launchApplication" finished-at="2025-09-21T18:21:44 IST" duration-ms="4756" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="allDeliveryTypesSearchAndCheckoutLogin()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-12T11:43:21 IST" name="allDeliveryTypesSearchAndCheckoutLogin" finished-at="2025-09-12T11:44:37 IST" duration-ms="76009" status="PASS">
+        <test-method signature="allDeliveryTypesSearchAndCheckoutLogin()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-21T18:21:44 IST" name="allDeliveryTypesSearchAndCheckoutLogin" finished-at="2025-09-21T18:22:47 IST" duration-ms="63706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allDeliveryTypesSearchAndCheckoutLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-12T11:44:38 IST" name="closeBrowser" finished-at="2025-09-12T11:44:40 IST" duration-ms="2617" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@d62fe5b]" started-at="2025-09-21T18:22:47 IST" name="closeBrowser" finished-at="2025-09-21T18:22:49 IST" duration-ms="1952" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin -->
       <class name="IGP.Sanity.UserJourneyWithExpressDelivery">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-12T11:42:09 IST" name="launchApplication" finished-at="2025-09-12T11:42:21 IST" duration-ms="12291" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-21T18:20:45 IST" name="launchApplication" finished-at="2025-09-21T18:20:50 IST" duration-ms="5432" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="userJourneyAndExpressDelivery()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-12T11:42:21 IST" name="userJourneyAndExpressDelivery" finished-at="2025-09-12T11:43:10 IST" duration-ms="48849" status="PASS">
+        <test-method signature="userJourneyAndExpressDelivery()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-21T18:20:50 IST" name="userJourneyAndExpressDelivery" finished-at="2025-09-21T18:21:37 IST" duration-ms="46331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userJourneyAndExpressDelivery -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-12T11:43:10 IST" name="closeBrowser" finished-at="2025-09-12T11:43:13 IST" duration-ms="2778" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@56928307]" started-at="2025-09-21T18:21:37 IST" name="closeBrowser" finished-at="2025-09-21T18:21:39 IST" duration-ms="1911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- IGP.Sanity.UserJourneyWithExpressDelivery -->
       <class name="IGP.Sanity.SortAndQuickFilters">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-12T11:44:40 IST" name="launchApplication" finished-at="2025-09-12T11:44:48 IST" duration-ms="7722" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-21T18:22:49 IST" name="launchApplication" finished-at="2025-09-21T18:22:54 IST" duration-ms="4426" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="sortFilterLowToHigh()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-12T11:44:48 IST" name="sortFilterLowToHigh" finished-at="2025-09-12T11:45:12 IST" duration-ms="24413" status="PASS">
+        <test-method signature="sortFilterLowToHigh()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-21T18:22:54 IST" name="sortFilterLowToHigh" finished-at="2025-09-21T18:23:15 IST" duration-ms="21006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortFilterLowToHigh -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-12T11:45:13 IST" name="closeBrowser" finished-at="2025-09-12T11:45:15 IST" duration-ms="2138" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@49964d75]" started-at="2025-09-21T18:23:15 IST" name="closeBrowser" finished-at="2025-09-21T18:23:17 IST" duration-ms="1869" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
