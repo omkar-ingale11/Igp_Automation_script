@@ -28,9 +28,9 @@ public class baseTest {
 		
 		
 		ChromeOptions options = new ChromeOptions();
-	//	options.addArguments("headless");
+		options.addArguments("headless");
 		options.setBinary("/usr/local/bin/chromium");
-		options.addArguments("--headless=new");
+	//	options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
