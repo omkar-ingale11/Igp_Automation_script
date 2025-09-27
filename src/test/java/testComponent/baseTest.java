@@ -28,15 +28,15 @@ public class baseTest {
 		
 		
 		ChromeOptions options = new ChromeOptions();
-		
+	//	options.addArguments("headless");
 		options.setBinary("/usr/local/bin/chromium");
 		options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
+        options.addArguments("--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis());
 		
-	//	options.addArguments("headless");
 //		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
 	//	driver.manage().window().setSize(new Dimension (1440, 900));
