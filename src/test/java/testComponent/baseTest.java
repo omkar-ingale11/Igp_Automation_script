@@ -24,12 +24,22 @@ public class baseTest {
 	//public abstractComponent.IgpAbstractComponent AbstractComponent; 
 	public WebDriver initializeDriver() {
 		
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		
+		
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("headless");
-		WebDriverManager.chromedriver().setup();
+		options.setBinary("/usr/local/bin/chromium");
+		options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
+		
+	//	options.addArguments("headless");
+//		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
-		driver.manage().window().setSize(new Dimension (1440, 900));
+	//	driver.manage().window().setSize(new Dimension (1440, 900));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		//driver.manage().window().setSize(new Dimension (1440, 900));
 	//	driver.manage().window().maximize();
