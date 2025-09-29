@@ -30,7 +30,7 @@ public class baseTest {
         options.addArguments("--disable-dev-shm-usage");
 
         // Unique temporary user-data-dir per session
-        String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();
+        String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();	
         options.addArguments("--user-data-dir=" + userDataDir);
 
         // Optional: set window size
@@ -51,7 +51,7 @@ public class baseTest {
 	 	{
 	 		TakesScreenshot ts = (TakesScreenshot)driver;
 	 		File source = ts.getScreenshotAs(OutputType.FILE);
-	 		File file = new File(System.getProperty("user.dir") + "//reports" + testCaseName + ".png");
+	 		File file = new File(System.getProperty("user.dir") + "/reports" + testCaseName + ".png");
 	 		FileUtils.copyFile(source, file);
 	 		//return System.getProperty(("user.dir") + "//reports" + testCaseName + ".png");
 	 		return (System.getProperty("user.dir")+"/reports" +testCaseName+".png");
