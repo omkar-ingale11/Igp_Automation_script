@@ -14,6 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class baseTest {
 
     public WebDriver driver;
@@ -22,7 +24,8 @@ public class baseTest {
     public WebDriver initializeDriver() {
 
         // Set path to chromedriver (ARM64 compatible)
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+     //   System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+    	
 
         ChromeOptions options = new ChromeOptions();
 
@@ -35,6 +38,8 @@ public class baseTest {
         String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();
         options.addArguments("--user-data-dir=" + userDataDir);
 
+        WebDriverManager.chromedriver().setup();
+        
         // Optional: set window size
         options.addArguments("--window-size=1366,768");
 
@@ -53,7 +58,7 @@ public class baseTest {
 	 	{
 	 		TakesScreenshot ts = (TakesScreenshot)driver;
 	 		File source = ts.getScreenshotAs(OutputType.FILE);
-	 		File file = new File(System.getProperty("user.dir") + "/reports" + testCaseName + ".png");
+	 		File file = new File(System.getProperty("user.dir") + "//reports" + testCaseName + ".png");
 	 		FileUtils.copyFile(source, file);
 	 		//return System.getProperty(("user.dir") + "//reports" + testCaseName + ".png");
 	 		return (System.getProperty("user.dir")+"/reports" +testCaseName+".png");
@@ -69,12 +74,20 @@ public class baseTest {
 	
         }
 		
-		@AfterMethod (alwaysRun = true)
-		public void closeBrowser() throws InterruptedException 
-		{
-			Thread.sleep(1500);
-			//driver.close();
-			driver.quit();
-		}
+//		@AfterMethod (alwaysRun = true)
+//		public void closeBrowser() throws InterruptedException 
+//		{
+//			Thread.sleep(1500);
+//			//driver.close();
+//			driver.quit();
+//		}
 		
+		@AfterMethod(alwaysRun = true)
+	    public void closeBrowser() throws InterruptedException {
+	        Thread.sleep(1500);
+	        if (driver != null) {
+	            driver.quit();
+	        }
+		
+		}	
 }						
