@@ -20,13 +20,6 @@
           <include name="allDeliveryTypesSearchAndCheckoutLogin"/>
         </methods>
       </class> <!-- IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin -->
-      <class name="IGP.Sanity.SortAndQuickFilters">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="sortFilterLowToHigh"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- IGP.Sanity.SortAndQuickFilters -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [IgpQuickSanity] -->
