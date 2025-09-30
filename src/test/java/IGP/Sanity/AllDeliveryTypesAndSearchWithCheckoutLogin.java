@@ -58,7 +58,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// PDP Page Object
 		PDPPage pdp = new PDPPage (driver);
 		
-		ab.scrollingDownmore();
+		ab.scrollingDownmorextra();
 		
 		// Selecting Today Date
 		pdp.selectTodayDate();

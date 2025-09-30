@@ -24,13 +24,13 @@ public class baseTest {
     public WebDriver initializeDriver() {
 
         // Set path to chromedriver (ARM64 compatible)
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+     //   System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	
 
         ChromeOptions options = new ChromeOptions();
 
         // Headless mode for server
-        options.addArguments("--headless=new");
+      //  options.addArguments("--headless=new");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
@@ -38,10 +38,11 @@ public class baseTest {
         String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();
         options.addArguments("--user-data-dir=" + userDataDir);
 
-       // WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         
         // Optional: set window size
-        	options.addArguments("--window-size=1366,768");
+        //	options.addArguments("--window-size=1366,768");
+        //	options.addArguments("--window-size=1280,800");
       //    options.addArguments("--window-size=1920,1080");
         
       //    Optional: specify Chromium binary path if needed
@@ -49,7 +50,7 @@ public class baseTest {
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-     //   driver.manage().window().maximize();
+        driver.manage().window().maximize();
         return driver;
         
     }
@@ -84,12 +85,12 @@ public class baseTest {
 //			driver.quit();
 //		}
 		
-//		@AfterMethod(alwaysRun = true)
-//	    public void closeBrowser() throws InterruptedException {
-//	        Thread.sleep(1500);
-//	        if (driver != null) {
-//	            driver.quit();
-//	        }
-//		
-//		}	
+		@AfterMethod(alwaysRun = true)
+	    public void closeBrowser() throws InterruptedException {
+	        Thread.sleep(1500);
+	        if (driver != null) {
+	            driver.quit();
+	        }
+		
+		}	
 }						

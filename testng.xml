@@ -6,8 +6,8 @@
 </listeners>
   <test thread-count="1" name="Test">
     <classes>
-      <class name="IGP.Sanity.UserJourneyWithExpressDelivery"/>
       <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin"/>
+      <class name="IGP.Sanity.UserJourneyWithExpressDelivery"/> 
       <class name="IGP.Sanity.SortAndQuickFilters"/>
     </classes>
   </test> <!-- Test -->

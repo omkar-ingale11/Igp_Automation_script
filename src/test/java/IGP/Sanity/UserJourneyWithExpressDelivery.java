@@ -133,14 +133,24 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 		
 		SummaryPage summaryPage = new SummaryPage (driver);
 		
-		// applying coupon code
-		summaryPage.clickOnApplyCTA();
+		List <WebElement> couponCheck = driver.findElements(By.xpath("//div[@class='applied-voucher']"));
 		
-		summaryPage.enterCouponName();
+		if (couponCheck.size() > 0 && couponCheck.get(0).isDisplayed())
+		{
+			System.out.println("Coupon is already applied");
+		}
 		
-		summaryPage.applyCoupon();
-		
-		ab.waitElementForAppear(By.cssSelector("div[class='coupon-band success revamp-coupon-success']"));
+		else
+		{
+			// applying coupon code
+			summaryPage.clickOnApplyCTA();
+			
+			summaryPage.enterCouponName();
+			
+			summaryPage.applyCoupon();
+			
+			ab.waitElementForAppear(By.cssSelector("div[class='coupon-band success revamp-coupon-success']"));
+		}
 		
 		// adding greeting message
 		
