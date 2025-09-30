@@ -66,8 +66,10 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// Standard Delivery
 		pdp.selectStdDelivery();
 		
+		
 		// open time slot drop down
 		pdp.openTimeSlotsDD();
+		ab.scrollingDownmore();
 		
 		ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
 		
@@ -162,7 +164,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		ab.waitElementForAppear(By.cssSelector("div[class='Heading-3--Bold']"));
 		
 		// searching for product
-		searchPage.searchBox("JVS1406967");
+		searchPage.searchBox("HD1110406");
 		
 		plpPage.select2ndprdct();
 		
