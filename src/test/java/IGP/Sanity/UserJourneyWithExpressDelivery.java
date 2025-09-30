@@ -71,7 +71,10 @@ public class UserJourneyWithExpressDelivery extends baseTest{
 			System.out.println("Express delivery is avalibale");
 		}
 		else 
-		{
+		{	ab.scrollingDownmore();
+			Thread.sleep(1000);
+			ab.scrollingDown();
+		//	ab.scrollingDownmore();
 			pdp.openTimeSlotsDD();
 			ab.scrollingDown();
 			Thread.sleep(1000);
