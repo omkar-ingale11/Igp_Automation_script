@@ -74,7 +74,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		if (timeSlots.size() > 0 && timeSlots.get(0).isDisplayed())
 		{
-			// open time slot drop down
+		 // open time slot drop down
 			pdp.openTimeSlotsDD();
 			ab.scrollingDown();
 			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
@@ -150,13 +150,23 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		pdp.clickFixedTimeDelivery();
 		
-		pdp.openTimeSlotsDD();
+		List <WebElement> timeSlots1 = driver.findElements(By.xpath("//div[@class='empty-title']//img[@id='drpdown-down-arrow']"));
 		
-		ab.scrollingDown1();
+		if (timeSlots1.size() > 0 && timeSlots1.get(0).isDisplayed())
+		{
+			// open time slot drop down
+			pdp.openTimeSlotsDD();
+			Thread.sleep(1000);
+			ab.scrollingDown1();
+			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
+			// open select time slot
+			pdp.selectTimeSlot();
+		}
 		
-		ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
-		
-		pdp.selectTimeSlot();
+		else
+		{
+			System.out.println("Timeslot is preselected");
+		}
 		
 		pdp.addToCart();
 		

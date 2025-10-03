@@ -5,7 +5,6 @@
     <classes>
       <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin">
         <methods>
-          <include name="closeBrowser"/>
           <include name="launchApplication"/>
           <include name="allDeliveryTypesSearchAndCheckoutLogin"/>
         </methods>

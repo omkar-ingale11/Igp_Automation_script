@@ -38,7 +38,7 @@ public class baseTest {
         String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();
         options.addArguments("--user-data-dir=" + userDataDir);
 
-    //    WebDriverManager.chromedriver().setup();
+     //   WebDriverManager.chromedriver().setup();
         
          // Optional: set window size
         //	options.addArguments("--window-size=1366,768");
@@ -85,12 +85,12 @@ public class baseTest {
 //			driver.quit();
 //		}
 		
-		@AfterMethod(alwaysRun = true)
-	    public void closeBrowser() throws InterruptedException {
-	        Thread.sleep(1500);
-	        if (driver != null) {
-	            driver.quit();
-	        }
-		
-		}	
+//		@AfterMethod(alwaysRun = true)
+//	    public void closeBrowser() throws InterruptedException {
+//	        Thread.sleep(1500);
+//	        if (driver != null) {
+//	            driver.quit();
+//	        }
+//		
+//		}	
 }						
