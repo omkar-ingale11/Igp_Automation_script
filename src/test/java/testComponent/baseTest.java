@@ -42,8 +42,8 @@ public class baseTest {
         
          // Optional: set window size
         //	options.addArguments("--window-size=1366,768");
-        	options.addArguments("--window-size=1280,800");
-       //   options.addArguments("--window-size=1920,1080");
+        //	options.addArguments("--window-size=1280,800");
+            options.addArguments("--window-size=1920,1080");
         
       //    Optional: specify Chromium binary path if needed
       //    options.setBinary("/usr/bin/chromium-browser");
