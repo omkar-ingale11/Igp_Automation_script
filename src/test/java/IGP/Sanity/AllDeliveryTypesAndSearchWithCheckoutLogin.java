@@ -35,11 +35,15 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// action class
 		Actions actions = new Actions(driver);
 		
+		// Search page object
+		SearchPage searchPage = new SearchPage(driver);
+		
+		// click on 2nd product
+		PLPages plpPage = new PLPages (driver);
+				
 		// click on same day delivery tile
 		IGPHomePage.clickSameDayDelivery();
-		
-	//	ab.waitElementForAppear(By.xpath("//img[@title='Floral Delight Cake']"));
-		
+				
 		// same day delivery page object
 		SameDayDeliveryPage sameDay = new SameDayDeliveryPage (driver);
 		
@@ -50,15 +54,14 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		Thread.sleep(3000);
 		
-		ab.scrollingDown(); 
+		searchPage.searchBox("JVS1361183");
 		
-		// click on first product
-		sameDay.clickOnProduct();
+		plpPage.select1stPrdct();
 		
 		// PDP Page Object
 		PDPPage pdp = new PDPPage (driver);
 		
-		ab.scrollingDownmorextra();
+		ab.scrollingDown1();
 		
 		// Selecting Today Date
 		pdp.selectTodayDate();
@@ -66,15 +69,23 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		// Standard Delivery
 		pdp.selectStdDelivery();
 		
+		//
+		List <WebElement> timeSlots = driver.findElements(By.xpath("//div[@class='empty-title']//img[@id='drpdown-down-arrow']"));
 		
-		// open time slot drop down
-		pdp.openTimeSlotsDD();
-		ab.scrollingDownmore();
+		if (timeSlots.size() > 0 && timeSlots.get(0).isDisplayed())
+		{
+			// open time slot drop down
+			pdp.openTimeSlotsDD();
+			ab.scrollingDown();
+			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
+			// open select time slot
+			pdp.selectTimeSlot();
+		}
 		
-		ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
-		
-		// open select time slot
-		pdp.selectTimeSlot();
+		else
+		{
+			System.out.println("Timeslot is preselected");
+		}
 		
 		Thread.sleep(1000);
 		
@@ -127,14 +138,8 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		ab.waitElementForAppear(By.cssSelector("div[class='Heading-3--Bold']"));
 		
-		// Search page object
-		SearchPage searchPage = new SearchPage(driver);
-		
 		// searching for product
 		searchPage.searchBox("HD1139330");
-		
-		// click on 2nd product
-		PLPages plpPage = new PLPages (driver);
 		
 		// click on first product
 		plpPage.select1stPrdct();
@@ -147,7 +152,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		
 		pdp.openTimeSlotsDD();
 		
-		ab.scrollingDown();
+		ab.scrollingDown1();
 		
 		ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
 		

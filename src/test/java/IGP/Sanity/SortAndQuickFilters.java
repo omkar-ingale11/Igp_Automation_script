@@ -44,7 +44,7 @@ public class SortAndQuickFilters extends baseTest{
 		List<Double> actualPrices = new ArrayList<>();
 		for (WebElement priceElement : priceElements) {
 		    String priceText = priceElement.getText().replaceAll("[^0-9.]", "");
-		    System.out.println(priceText);
+		 //   System.out.println(priceText);
 		    if (!priceText.isEmpty()) {
                 actualPrices.add(Double.parseDouble(priceText));
             }
@@ -77,7 +77,7 @@ public class SortAndQuickFilters extends baseTest{
 		List<Double> H2LactualPrices = new ArrayList<>();
 		for (WebElement priceElement : H2LpriceElements) {
 		    String priceText = priceElement.getText().replaceAll("[^0-9.]", "");
-		    System.out.println(priceText);
+		   // System.out.println(priceText);
 		    if (!priceText.isEmpty()) {
                 H2LactualPrices.add(Double.parseDouble(priceText));
             }
@@ -112,7 +112,7 @@ public class SortAndQuickFilters extends baseTest{
 			List<Double> LfActualPrices = new ArrayList<>();
 			for (WebElement priceElement : LFpriceElements) {
 			    String priceText = priceElement.getText().replaceAll("[^0-9.]", "");
-			    System.out.println(priceText);
+			//    System.out.println(priceText);
 			}
 		          
 			

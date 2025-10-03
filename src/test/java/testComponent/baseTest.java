@@ -24,7 +24,7 @@ public class baseTest {
     public WebDriver initializeDriver() {
 
         // Set path to chromedriver (ARM64 compatible)
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+   //     System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     	
 
         ChromeOptions options = new ChromeOptions();
@@ -38,12 +38,12 @@ public class baseTest {
         String userDataDir = "/tmp/chrome_" + System.currentTimeMillis() + "_" + UUID.randomUUID();
         options.addArguments("--user-data-dir=" + userDataDir);
 
-      //  WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().setup();
         
         // Optional: set window size
         //	options.addArguments("--window-size=1366,768");
         	options.addArguments("--window-size=1280,800");
-      //    options.addArguments("--window-size=1920,1080");
+       //   options.addArguments("--window-size=1920,1080");
         
       //    Optional: specify Chromium binary path if needed
       //    options.setBinary("/usr/bin/chromium-browser");
