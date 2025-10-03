@@ -57,15 +57,30 @@ public class baseTest {
 
 	
 	// Screenshot Utility
-	 	public String getScreenshot (String testCaseName, WebDriver driver) throws IOException
-	 	{
-	 		TakesScreenshot ts = (TakesScreenshot)driver;
-	 		File source = ts.getScreenshotAs(OutputType.FILE);
-	 		File file = new File(System.getProperty("user.dir") + "//reports" + testCaseName + ".png");
-	 		FileUtils.copyFile(source, file);
-	 		//return System.getProperty(("user.dir") + "//reports" + testCaseName + ".png");
-	 		return (System.getProperty("user.dir")+"/reports" +testCaseName+".png");
-	 	}
+//	 	public String getScreenshot (String testCaseName, WebDriver driver) throws IOException
+//	 	{
+//	 		TakesScreenshot ts = (TakesScreenshot)driver;
+//	 		File source = ts.getScreenshotAs(OutputType.FILE);
+//	 		File file = new File(System.getProperty("user.dir") + "//reports" + testCaseName + ".png");
+//	 		FileUtils.copyFile(source, file);
+//	 		//return System.getProperty(("user.dir") + "//reports" + testCaseName + ".png");
+//	 		return (System.getProperty("user.dir")+"/reports" +testCaseName+".png");
+//	 	}
+    
+    public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        // Save in /reports/screenshots/
+        File screenshotDir = new File(System.getProperty("user.dir") + "/reports/screenshots/");
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdirs();
+        }
+        File file = new File(screenshotDir, testCaseName + ".png");
+        FileUtils.copyFile(source, file);
+        // Return the relative path for the report
+        return "./screenshots/" + testCaseName + ".png";
+    }
+
 		
 		@BeforeMethod (alwaysRun = true)
 		public pageObject.IGPHomePage launchApplication()
