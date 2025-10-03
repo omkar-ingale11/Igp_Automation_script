@@ -77,8 +77,8 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		 // open time slot drop down
 			pdp.openTimeSlotsDD();
 			Thread.sleep(1000);
-			ab.scrollingDown400();
-			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
+			ab.scrollingDown150();
+			ab.waitElementToBeClickable(By.xpath("//div[@class='timeslotOptions']"));
 			// open select time slot
 			pdp.selectTimeSlot();
 		}
@@ -158,8 +158,8 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 			// open time slot drop down
 			pdp.openTimeSlotsDD();
 			Thread.sleep(1000);
-			ab.scrollingDown1();
-			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
+			ab.scrollingDown150();
+			ab.waitElementToBeClickable(By.xpath("//div[@class='timeslotOptions']"));
 			// open select time slot
 			pdp.selectTimeSlot();
 		}

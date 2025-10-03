@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-03T15:19:43 IST" name="IgpQuickSanity" finished-at="2025-10-03T15:22:22 IST" duration-ms="158494">
+  <suite started-at="2025-10-03T17:37:04 IST" name="Default suite" finished-at="2025-10-03T17:38:47 IST" duration-ms="102701">
     <groups>
     </groups>
-    <test started-at="2025-10-03T15:19:43 IST" name="Test" finished-at="2025-10-03T15:22:22 IST" duration-ms="158494">
+    <test started-at="2025-10-03T17:37:04 IST" name="Default test" finished-at="2025-10-03T17:38:47 IST" duration-ms="102701">
       <class name="IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@2bb3058]" started-at="2025-10-03T15:19:43 IST" name="launchApplication" finished-at="2025-10-03T15:19:50 IST" duration-ms="6666" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@194bcebf]" started-at="2025-10-03T17:37:04 IST" name="launchApplication" finished-at="2025-10-03T17:37:14 IST" duration-ms="9766" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="allDeliveryTypesSearchAndCheckoutLogin()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@2bb3058]" started-at="2025-10-03T15:19:50 IST" name="allDeliveryTypesSearchAndCheckoutLogin" finished-at="2025-10-03T15:20:51 IST" duration-ms="60740" status="PASS">
+        <test-method signature="allDeliveryTypesSearchAndCheckoutLogin()[pri:0, instance:IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin@194bcebf]" started-at="2025-10-03T17:37:14 IST" name="allDeliveryTypesSearchAndCheckoutLogin" finished-at="2025-10-03T17:38:47 IST" duration-ms="92842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allDeliveryTypesSearchAndCheckoutLogin -->
       </class> <!-- IGP.Sanity.AllDeliveryTypesAndSearchWithCheckoutLogin -->
-      <class name="IGP.Sanity.UserJourneyWithExpressDelivery">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@5a755cc1]" started-at="2025-10-03T15:20:51 IST" name="launchApplication" finished-at="2025-10-03T15:20:56 IST" duration-ms="5122" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="userJourneyAndExpressDelivery()[pri:0, instance:IGP.Sanity.UserJourneyWithExpressDelivery@5a755cc1]" started-at="2025-10-03T15:20:56 IST" name="userJourneyAndExpressDelivery" finished-at="2025-10-03T15:21:47 IST" duration-ms="50753" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userJourneyAndExpressDelivery -->
-      </class> <!-- IGP.Sanity.UserJourneyWithExpressDelivery -->
-      <class name="IGP.Sanity.SortAndQuickFilters">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@7ae42ce3]" started-at="2025-10-03T15:21:47 IST" name="launchApplication" finished-at="2025-10-03T15:21:56 IST" duration-ms="9305" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="sortFilterLowToHigh()[pri:0, instance:IGP.Sanity.SortAndQuickFilters@7ae42ce3]" started-at="2025-10-03T15:21:56 IST" name="sortFilterLowToHigh" finished-at="2025-10-03T15:22:22 IST" duration-ms="25155" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortFilterLowToHigh -->
-      </class> <!-- IGP.Sanity.SortAndQuickFilters -->
-    </test> <!-- Test -->
-  </suite> <!-- IgpQuickSanity -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

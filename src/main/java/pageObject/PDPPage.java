@@ -67,7 +67,7 @@ public class PDPPage extends IgpAbstractComponent{
 	    WebElement openSlotsDD;
 	    
 	    // Select time slots
-	    @FindBy (xpath = "//div[@class='timeslotOptions']")
+	    @FindBy (xpath = "//div[@class='timeslotOptions']") // div[class='timeslotOptions']
 	    WebElement selectTimeSlot;
 	    
 	    // Fixed time delivery
