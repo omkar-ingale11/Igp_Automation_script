@@ -52,6 +52,14 @@ public class IgpAbstractComponent {
 	}
 
 	// scrolling down
+		public void scrollingDown400()
+		{
+		JavascriptExecutor js =  (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)");
+		}	
+		
+	
+	// scrolling down
 	public void scrollingDown1()
 	{
 	JavascriptExecutor js =  (JavascriptExecutor) driver;
