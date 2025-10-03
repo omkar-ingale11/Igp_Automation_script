@@ -76,7 +76,7 @@ public class AllDeliveryTypesAndSearchWithCheckoutLogin extends baseTest {
 		{
 		 // open time slot drop down
 			pdp.openTimeSlotsDD();
-			ab.scrollingDown();
+			ab.scrollingDown1();
 			ab.waitElementForAppear(By.xpath("//div[@class='timeslotOptions']"));
 			// open select time slot
 			pdp.selectTimeSlot();
